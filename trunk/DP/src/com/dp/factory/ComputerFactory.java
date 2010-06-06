@@ -1,7 +1,7 @@
 package com.dp.factory;
 
 /**
- * 工厂模式（使用条件）：
+ * 工厂模式（使用条件-个人理解）：
  * 1.要频繁使用new class()
  * 2.实现封装，符合面向对象设计思想
  * 
@@ -10,7 +10,7 @@ package com.dp.factory;
  */
 public abstract class ComputerFactory {
 //生产RAM CPU
-	public abstract RAM produceRAM();
-	public abstract CPU produceCPU();
+	public abstract RAM getRAM();
+	public abstract CPU getCPU();
 	
 }

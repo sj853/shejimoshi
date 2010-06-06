@@ -4,17 +4,17 @@ public class TestMain {
 	
 	public static void main(String[] args) {
 		ComputerFactory macProducer = new MacProducer();
-		CPU macCPU = macProducer.produceCPU();
+		CPU macCPU = macProducer.getCPU();
 		macCPU.getTitle();
-		RAM macRAM = macProducer.produceRAM();
+		RAM macRAM = macProducer.getRAM();
 		macRAM.getTitle();
 		
 		System.out.println("--------");
 		
 		ComputerFactory pcProducer = new PcProducer();
-		CPU pcCPU = pcProducer.produceCPU();
+		CPU pcCPU = pcProducer.getCPU();
 		pcCPU.getTitle();
-		RAM pcRAM = pcProducer.produceRAM();
+		RAM pcRAM = pcProducer.getRAM();
 		pcRAM.getTitle();
 		
 	}
