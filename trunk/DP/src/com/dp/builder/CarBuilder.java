@@ -2,30 +2,32 @@ package com.dp.builder;
 
 public class CarBuilder implements AbstactCarBuilder {
 
-	Car Posche;
-	CarPart CarEngine,CarThrottle,CarWheel;
+	public CarBuilder() {
+		car = new Car();
+	}
+
+	Car car;
 	@Override
 	public void builderCarEngine() {
-		
-		CarEngine = new CarEngine();
-		CarEngine.partName();
+		car.carEngine = new CarEngine();
+		car.carEngine.partName();
 	}
 
 	@Override
 	public void builderCarThrottle() {
-		CarThrottle = new CarThrottle();
-		CarThrottle.partName();
+		car.carThrottle = new CarThrottle();
+		car.carThrottle.partName();
 	}
 
 	@Override
 	public void builderCarWheel() {
-		CarWheel = new CarWheel();
-		CarWheel.partName();
+		car.carWheel = new CarWheel();
+		car.carWheel.partName();
 	}
 
 	@Override
 	public Car getCar() {
-		return null;
+		return car;
 	}
 
 }

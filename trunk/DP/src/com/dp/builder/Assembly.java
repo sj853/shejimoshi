@@ -12,5 +12,6 @@ public class Assembly {
 		carBuilder.builderCarEngine();
 		carBuilder.builderCarThrottle();
 		carBuilder.builderCarWheel();
+		System.out.println("a car is borned");
 	}
 }
