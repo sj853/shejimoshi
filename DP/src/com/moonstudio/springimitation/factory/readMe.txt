@@ -1,1 +1,1 @@
-模拟Spring
+模拟Spring的beanFactory
