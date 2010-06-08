@@ -2,6 +2,6 @@
 
 <beans>
 
-	<bean id="VehicleType" class="com.moonstudio.springimitation.factory.Train" />
+	<bean id="VehicleType" class="com.moonstudio.dp.factory.springimitation.Train" />
 
 </beans>

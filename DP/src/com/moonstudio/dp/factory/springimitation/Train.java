@@ -1,4 +1,4 @@
-package com.moonstudio.springimitation.factory;
+package com.moonstudio.dp.factory.springimitation;
 
 public class Train implements Moveable {
 
