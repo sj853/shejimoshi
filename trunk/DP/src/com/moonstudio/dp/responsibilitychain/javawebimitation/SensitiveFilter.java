@@ -15,6 +15,7 @@ public class SensitiveFilter implements Filter {
 				"敏感", "")
 				+ "...SensitiveFilter...";
 		request.setRequestStr(newStr);
+		// 如果有非法的东西，想中断这个操作，那么就不要调用链条的dofilter了
 		filterChain.doFilter(request, response, filterChain);
 		response.setResponseStr(response.getResponseStr() + "...SensitiveFilter...");
 
