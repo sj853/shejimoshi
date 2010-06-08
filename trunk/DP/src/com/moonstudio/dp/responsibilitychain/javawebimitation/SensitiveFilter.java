@@ -9,11 +9,14 @@ package com.moonstudio.dp.responsibilitychain.javawebimitation;
 public class SensitiveFilter implements Filter {
 
 	@Override
-	public void doFilter(Request request, Response response) {
+	public void doFilter(Request request, Response response,
+			FilterChain filterChain) {
 		String newStr = request.getRequestStr().replace("被就业", "就业").replace(
 				"敏感", "")
 				+ "...SensitiveFilter...";
 		request.setRequestStr(newStr);
+		filterChain.doFilter(request, response, filterChain);
+		response.setResponseStr(response.getResponseStr() + "...SensitiveFilter...");
 
 	}
 

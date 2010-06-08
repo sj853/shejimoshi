@@ -9,10 +9,14 @@ package com.moonstudio.dp.responsibilitychain.javawebimitation;
 public class HtmlFilter implements Filter {
 
 	@Override
-	public void doFilter(Request request, Response response) {
+	public void doFilter(Request request, Response response,
+			FilterChain filterChain) {
 		String newStr = request.getRequestStr().replace("<", "[").replace(">",
-				"]")+"...HtmlFilter...";
+				"]")
+				+ "...HtmlFilter...";
 		request.setRequestStr(newStr);
+		filterChain.doFilter(request, response, filterChain);
+		response.setResponseStr(response.getResponseStr() + "...HtmlFilter...");
 	}
 
 }
