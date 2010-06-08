@@ -1,4 +1,4 @@
-package com.moonstudio.springimitation.factory;
+package com.moonstudio.dp.factory.springimitation;
 
 import java.util.Properties;
 
@@ -15,7 +15,7 @@ public class Test {
 		// 读配置文件：这个就可以写个工厂了
 		Properties pros = new Properties();
 		pros.load(Test.class.getClassLoader().getResourceAsStream(
-				"com/moonstudio/springimitation/factory/spring.properties"));
+				"com/moonstudio/dp/factory/springimitation/spring.properties"));
 		String vehicleTypeName = pros.getProperty("VehicleType");
 		System.out.println(vehicleTypeName);
 		Object o = Class.forName(vehicleTypeName).newInstance();
@@ -25,7 +25,7 @@ public class Test {
 		// 下面是Spring(我们自己的)的写法.它的叫法：bean容器,bean工厂,IOC
 		// =============================================================
 
-		 BeanFactory factory = new ClassPathXmlApplicationContext("com/moonstudio/springimitation/factory/applicationContext.xml");
+		 BeanFactory factory = new ClassPathXmlApplicationContext("com/moonstudio/dp/factory/springimitation/applicationContext.xml");
 		 //id是配置中beans-bean的id
 		 //Object o = factory.getBean("id");
 		Moveable m2 = (Moveable) factory.getBean("VehicleType");
