@@ -16,7 +16,7 @@ public class Test {
 		FilterChain fc = new FilterChain();
 		fc.addFilter(new HtmlFilter()).addFilter(new SensitiveFilter());
 
-		fc.doFilter(request, response);
+		fc.doFilter(request, response, fc);
 
 		System.out.println("New:\n" + request.getRequestStr() + "\n"
 				+ response.getResponseStr());
